@@ -50,7 +50,7 @@ header {
   border-radius: 24px;
   border: solid white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   background-color: #d2f1fafd;
   text-align: end;
