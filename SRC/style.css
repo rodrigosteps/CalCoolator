@@ -28,7 +28,7 @@ header {
 }
 
 .logo img {
-  width: 40em;
+  width: 28em;
 }
 
 /*main style*/
@@ -37,7 +37,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 40em;
+  width: 30em;
   padding: var(--buttonPadding);
   border-radius: 24px;
   background-color: var(--panel);
@@ -45,72 +45,74 @@ header {
 
 .Display {
   margin: 0 auto;
+  padding: 0.8em 0.2em;
   width: 90%;
   height: 14rem;
-  border-radius: 24px;
-  border: solid white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: #d2f1fafd;
-  text-align: end;
-  font-size: 10em;
+  text-align: left;
+  font-size: calc(5.1em + 1vw);
   font-family: Fascinate Inline;
-  overflow: auto;
-  color: var(--buttontextColor);
+  color: whitesmoke;
+  background-color: #435f67fd;
+  border: solid white;
+  border-radius: 24px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  -webkit-text-stroke: rgb(9, 78, 253) 2px;
 
 }
 
 .Buttons  {
   animation: bounce 2s ease-in-out forwards ;
-
 }
 
 @keyframes bounce {
-
-0%  {transform: translatey(500px);}
+0%  {transform: translatey(100px);
+opacity: 0;}
 50% {transform: translatey(-10px);}
 80% {transform: translatey(30px);}
 100% {transform: translatey(0px);}
-  
 }
 
 .Buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 2px;
+  gap: 1px;
   width: 100%;
   margin: 1em auto;
 
+  #Equal{
+    background-color: #116bdf;
+  }
   button {
-    width: 10em;
+    width: 8em;
     border-radius: 10px;
     border: none;
     background-color: var(--panel);
     border-radius: 8px;
-    box-shadow: 2px 2px 3px #181818, -2px -2px 3px #202020;
   }
 
   span {
-    font-size: 5em;
+    font-size: 3.5em;
     font-weight: bolder;
     color: var(--buttontextColor);
     -webkit-text-stroke: 1px white;
   }
 }
+button:active{
+  transform: translatey(10px);
+}
 
 button:hover {
-  scale: 1.48888;
+  scale: 1.2;
   transition: ease 0.3s;
   box-shadow: 0;
-  animation: rotate 2s ease-in-out infinite alternate;
+  border-radius: 15px;
+  animation: poup 2s ease-in-out infinite alternate;
+  box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
 }
 
-@keyframes rotate {
-  50% {transform: rotate(50deg);}
-  
+@keyframes poup {
+  100% {transform: scale(0.6);}
 }
+
 /*Footer style*/
 .footer {
   display: flex;
@@ -132,63 +134,29 @@ button:hover {
 /*Mobile style*/
 
 @media screen and (max-width: 600px) {
+  .Container {
+zoom: 0.7;
+  }
+
+
+
+/*Mobile style
+
+@media screen and (max-width: 480px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: 26em;
-  }
-
-  .display {
-    margin: 0 auto;
-    width: 90%;
-    height: 8em;
-  }
-
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-    width: 50%;
-    margin: 1em auto;
-    justify-content: center;
-
-    button {
-      width: 6em;
-      border-radius: 10px;
-      border: none;
-      background-color: var(--panel);
-      border-radius: 8px;
-      box-shadow: 5px 5px 6px #181818, -5px -5px 6px #202020;
-    }
-
-    span {
-      font-size: 4em;
-      font-weight: bolder;
-      color: var(--buttontextColor);
-      -webkit-text-stroke: 1px white;
-    }
-  }
-}
-
-/*Mobile style*/
-
-@media screen and (max-width: 400px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    width: 22em;
+    width: 10em;
+    background-color: yellow;
   }
 
   .display {
     margin: 0 auto;
     width: 90%;
     height: 6em;
-  }
+      }
 
   .buttons {
     display: grid;
