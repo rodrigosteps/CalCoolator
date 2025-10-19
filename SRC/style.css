@@ -51,66 +51,78 @@ header {
   text-align: left;
   font-size: calc(5.1em + 1vw);
   font-family: Fascinate Inline;
-  color: whitesmoke;
+  color: var(--buttontextColor);
   background-color: #435f67fd;
   border: solid white;
   border-radius: 24px;
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-text-stroke: rgb(9, 78, 253) 2px;
-
-}
-
-.Buttons  {
-  animation: bounce 2s ease-in-out forwards ;
-}
-
-@keyframes bounce {
-0%  {transform: translatey(100px);
-opacity: 0;}
-50% {transform: translatey(-10px);}
-80% {transform: translatey(30px);}
-100% {transform: translatey(0px);}
+  -webkit-text-stroke: white 4px;
 }
 
 .Buttons {
-  gap: 1px;
+    gap: 1px;
   width: 100%;
   margin: 1em auto;
+  animation: bounce 2s ease-in-out forwards;
+}
 
-  #Equal{
-    background-color: #116bdf;
+@keyframes bounce {
+  0% {
+    transform: translatey(100px);
+    opacity: 0;
   }
-  button {
+  50% {
+    transform: translatey(-10px);
+  }
+  80% {
+    transform: translatey(30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.Buttons button {
     width: 8em;
-    border-radius: 10px;
     border: none;
     background-color: var(--panel);
     border-radius: 8px;
   }
 
-  span {
+  .Buttons span {
     font-size: 3.5em;
     font-weight: bolder;
     color: var(--buttontextColor);
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
   }
-}
-button:active{
+
+  .Buttons #Equal,
+ .Buttons #OperatorDivide,
+ .Buttons #OperatorMultiply,
+ .Buttons #OperatorPlus,
+ .Buttons #OperatorMinus {
+    background-color: #116bdf;
+    box-shadow: 2px 2px 3px #85b4f0, -2px -2px 3px #040608;
+    margin-top: 4px;
+  }
+
+.Buttons button:active {
   transform: translatey(10px);
 }
 
-button:hover {
-  scale: 1.2;
+.Buttons button:hover {
+  transform:scale(1.1);
   transition: ease 0.3s;
-  box-shadow: 0;
   border-radius: 15px;
   animation: poup 2s ease-in-out infinite alternate;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
 }
 
 @keyframes poup {
-  100% {transform: scale(0.6);}
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 /*Footer style*/
@@ -120,67 +132,146 @@ button:hover {
   justify-content: space-between;
   margin: 4em 1em 0em 1em;
   filter: invert(100%);
+}
 
-  .social img {
-    width: 30px;
-    filter: invert(100%);
-  }
+.social img {
+  width: 30px;
+  filter: invert(100%);
 }
 
 .footer img {
   width: 180px;
 }
 
-/*Mobile style*/
+/*Mobile style 900 less*/
 
-@media screen and (max-width: 600px) {
-  .Container {
-zoom: 0.7;
+@media screen and (max-width: 960px) {
+  body {
+    width: 100%;
   }
 
+  header {
+    margin: 1em auto;
+    width: 28.5em;
+    display: flex;
+    justify-content: center;
+  }
 
+  .logo img {
+    width: 570px;
+  }
 
-/*Mobile style
+  .Container {
+    width: 36em;
+    padding: 1em 0.2em;
+  }
 
-@media screen and (max-width: 480px) {
-  .container {
+  .Buttons {
+    width: 100%;
+    margin: 1em 2em;
+    gap: 4px;
+  }
+
+  .Buttons button {
+    width: 9em;
+    border: none;
+    background-color: var(--panel);
+    border-radius: 8px;
+  }
+
+  .Buttons span {
+    font-size: 6.2em;
+    font-weight: bolder;
+    color: var(--buttontextColor);
+    -webkit-text-stroke: 3px white;
+  }
+
+  .Buttons #Equal,
+  .Buttons #OperatorDivide,
+  .Buttons #OperatorMultiply,
+  .Buttons #OperatorPlus,
+  .Buttons #OperatorMinus {
+    background-color: #116bdf;
+    box-shadow: 2px 2px 3px #020405a3, -2px -2px 3px #040608ae;
+    margin-top: 4px;
+  }
+
+  .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    width: 10em;
-    background-color: yellow;
+    align-items: center;
+  }
+}
+
+/*Mobile style 600 less */
+@media screen and (max-width: 600px) {
+  header {
+    margin: 1em auto;
+    width: 20.5em;
+    display: flex;
+    align-items: center;
   }
 
-  .display {
-    margin: 0 auto;
-    width: 90%;
-    height: 6em;
-      }
+  .logo img {
+    width: 320px;
+  }
 
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-    width: 20%;
+  .Container {
+    width: 24.5em;
+  }
+
+  .Buttons {
+    width: 100%;
+    margin: 1em 1em;
+    gap: 4px;
+  }
+
+  .Buttons button {
+    width: 6em;
+    border: none;
+    background-color: var(--panel);
+    border-radius: 8px;
+  }
+
+  .Buttons span {
+    font-size: 4.2em;
+    font-weight: bolder;
+    color: var(--buttontextColor);
+    -webkit-text-stroke: 3px white;
+  }
+
+  .Buttons #Equal,
+  .Buttons #OperatorDivide,
+  .Buttons #OperatorMultiply,
+  .Buttons #OperatorPlus,
+  .Buttons #OperatorMinus {
+    background-color: #116bdf;
+    box-shadow: 2px 2px 3px #020405a3, -2px -2px 3px #040608ae;
+    margin-top: 4px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*Mobile style 400 less*/
+@media screen and (max-width: 350px) {
+  header {
     margin: 1em auto;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
 
-    button {
-      width: 5em;
-      border-radius: 10px;
-      border: none;
-      background-color: var(--panel);
-      border-radius: 8px;
-      box-shadow: 5px 5px 6px #181818, -5px -5px 6px #202020;
-    }
+  .Container{
+    zoom:0.8 ;
+  }
 
-    span {
-      font-size: 3em;
-      font-weight: bolder;
-      color: var(--buttontextColor);
-      -webkit-text-stroke: 1px white;
-    }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
