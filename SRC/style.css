@@ -14,11 +14,13 @@
   --buttonPadding: 1em;
   --buttontextColor: #5bc0e8;
 }
+
 /*Body style*/
 body {
   background-color: var(--bkg);
   scroll-behavior: smooth;
 }
+
 /*header style*/
 header {
   margin: 1em auto;
@@ -48,11 +50,11 @@ header {
   padding: 0.8em 0.2em;
   width: 90%;
   height: 14rem;
-  text-align: left;
+  text-align: right;
   font-size: calc(5.1em + 1vw);
   font-family: Fascinate Inline;
   color: var(--buttontextColor);
-  background-color: #435f67fd;
+  background-color: #0864e5fd;
   border: solid white;
   border-radius: 24px;
   overflow: hidden;
@@ -61,7 +63,8 @@ header {
 }
 
 .Buttons {
-  gap: 1px;
+
+  gap: 2px;
   width: 100%;
   margin: 1em auto;
   animation: bounce 2s ease-in-out forwards;
@@ -226,8 +229,11 @@ header {
   }
 
   .Buttons {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
     width: 100%;
-    margin: 1em 1em;
+    margin: 1em auto;
     gap: 4px;
   }
 
