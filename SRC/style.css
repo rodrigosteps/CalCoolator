@@ -61,7 +61,7 @@ header {
 }
 
 .Buttons {
-    gap: 1px;
+  gap: 1px;
   width: 100%;
   margin: 1em auto;
   animation: bounce 2s ease-in-out forwards;
@@ -84,35 +84,35 @@ header {
 }
 
 .Buttons button {
-    width: 8em;
-    border: none;
-    background-color: var(--panel);
-    border-radius: 8px;
-  }
+  width: 8em;
+  border: none;
+  background-color: var(--panel);
+  border-radius: 8px;
+}
 
-  .Buttons span {
-    font-size: 3.5em;
-    font-weight: bolder;
-    color: var(--buttontextColor);
-    -webkit-text-stroke: 2px white;
-  }
+.Buttons span {
+  font-size: 3.5em;
+  font-weight: bolder;
+  color: var(--buttontextColor);
+  -webkit-text-stroke: 2px white;
+}
 
-  .Buttons #Equal,
- .Buttons #OperatorDivide,
- .Buttons #OperatorMultiply,
- .Buttons #OperatorPlus,
- .Buttons #OperatorMinus {
-    background-color: #116bdf;
-    box-shadow: 2px 2px 3px #85b4f0, -2px -2px 3px #040608;
-    margin-top: 4px;
-  }
+.Buttons #Equal,
+.Buttons #OperatorDivide,
+.Buttons #OperatorMultiply,
+.Buttons #OperatorPlus,
+.Buttons #OperatorMinus {
+  background-color: #116bdf;
+  box-shadow: 2px 2px 3px #85b4f0, -2px -2px 3px #040608;
+  margin-top: 4px;
+}
 
 .Buttons button:active {
   transform: translatey(10px);
 }
 
 .Buttons button:hover {
-  transform:scale(1.1);
+  transform: scale(1.1);
   transition: ease 0.3s;
   border-radius: 15px;
   animation: poup 2s ease-in-out infinite alternate;
@@ -135,11 +135,16 @@ header {
 }
 
 .social img {
-  width: 30px;
+  width: 40px;
   filter: invert(100%);
 }
 
-.footer img {
+.social img:hover{
+  filter: invert(85%);
+  transform: rotate(-10deg) scale(1.1);
+
+}
+.footerLogo img {
   width: 180px;
 }
 
@@ -265,8 +270,8 @@ header {
     align-items: center;
   }
 
-  .Container{
-    zoom:0.8 ;
+  .Container {
+    zoom: 0.8;
   }
 
   .footer {
