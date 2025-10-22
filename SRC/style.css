@@ -63,7 +63,6 @@ header {
 }
 
 .Buttons {
-
   gap: 2px;
   width: 100%;
   margin: 1em auto;
@@ -142,10 +141,9 @@ header {
   filter: invert(100%);
 }
 
-.social img:hover{
+.social img:hover {
   filter: invert(85%);
   transform: rotate(-10deg) scale(1.1);
-
 }
 .footerLogo img {
   width: 180px;
@@ -175,8 +173,10 @@ header {
   }
 
   .Buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
     width: 100%;
-    margin: 1em 2em;
     gap: 4px;
   }
 
@@ -230,7 +230,7 @@ header {
 
   .Buttons {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     width: 100%;
     margin: 1em auto;
