@@ -18,7 +18,6 @@
 /*Body style*/
 body {
   background-color: var(--bkg);
-  scroll-behavior: smooth;
 }
 
 /*header style*/
@@ -63,33 +62,21 @@ header {
 }
 
 .Buttons {
-  gap: 2px;
-  width: 100%;
-  margin: 1em auto;
-  animation: bounce 2s ease-in-out forwards;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 4px;
+  margin: 2em auto;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translatey(100px);
-    opacity: 0;
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  80% {
-    transform: translatey(30px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
 
 .Buttons button {
   width: 8em;
+  height: 6em;
+  padding: 1em;
   border: none;
   background-color: var(--panel);
   border-radius: 8px;
+  font-family: "Science Gothic";
 }
 
 .Buttons span {
@@ -109,22 +96,21 @@ header {
   margin-top: 4px;
 }
 
+.Buttons button:hover {
+  font-family: "oi";
+
+}
+
 .Buttons button:active {
   transform: translatey(10px);
 }
 
 .Buttons button:hover {
+      text-align:center;
   transform: scale(1.1);
-  transition: ease 0.3s;
+  transition: ease-in-out 0.4s;
   border-radius: 15px;
-  animation: poup 2s ease-in-out infinite alternate;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
-}
-
-@keyframes poup {
-  100% {
-    transform: scale(0.8);
-  }
 }
 
 /*Footer style*/
