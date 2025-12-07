@@ -26,10 +26,28 @@ header {
   width: 50%;
   display: flex;
   justify-content: center;
+  animation: logo  0.4s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3s both;;
+
 }
 
 .logo img {
   width: 28em;
+}
+@keyframes logo {
+    0% {
+    -webkit-transform: scale(2.1) ;
+            transform: scale(2.1);
+            background-color:var(--bkg);
+            width: 100%;
+            height: 1700px;
+            position: relative;
+            top: -400px;  
+          }
+  100% {
+    -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+    
+  }
 }
 
 /*main style*/
@@ -38,52 +56,49 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 30em;
+  width: 34em;
   padding: var(--buttonPadding);
   border-radius: 24px;
   background-color: var(--panel);
 }
 
 .Display {
-  margin: 0 auto;
+  margin: 0 auto 0.4em auto;
   padding: 0.8em 0.2em;
   width: 90%;
-  height: 14rem;
-  text-align: right;
-  font-size: calc(5.1em + 1vw);
-  font-family: Fascinate Inline;
+  height: 10rem;
+  text-align: center;
+  font-size: 5em;
+  font-family:' Fascinate Inline';
   color: var(--buttontextColor);
   background-color: #0864e5fd;
   border: solid white;
   border-radius: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-text-stroke: white 4px;
+  -webkit-text-stroke: white 2px;
 }
 
 .Buttons {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
-  margin: 2em auto;
 }
-
 
 .Buttons button {
   width: 8em;
   height: 6em;
-  padding: 1em;
   border: none;
   background-color: var(--panel);
   border-radius: 8px;
-  font-family: "Science Gothic";
+  font-family: "Bungee";
 }
 
 .Buttons span {
-  font-size: 3.5em;
+  font-size: 4.5em;
   font-weight: bolder;
   color: var(--buttontextColor);
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 1px whitesmoke;
 }
 
 .Buttons #Equal,
@@ -96,21 +111,51 @@ header {
   margin-top: 4px;
 }
 
-.Buttons button:hover {
-  font-family: "oi";
-
-}
-
 .Buttons button:active {
   transform: translatey(10px);
 }
 
 .Buttons button:hover {
-      text-align:center;
-  transform: scale(1.1);
+  text-align: center;
+  transform: scale(1.1) translateY(-20px);
   transition: ease-in-out 0.4s;
   border-radius: 15px;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
+}
+
+#ClearDisplay:hover,
+#Clear:hover,
+#Backspace:hover,
+#OperatorDivide:hover {
+  font-family: "Notable";
+}
+
+#Key7:hover,
+#Key8:hover,
+#Key9:hover,
+#OperatorMultiply:hover {
+  font-family: "Frijole";
+}
+
+#Key4:hover,
+#Key5:hover,
+#Key6:hover,
+#OperatorPlus:hover {
+  font-family: "Kumar One";
+}
+
+#Key3:hover,
+#Key2:hover,
+#Key1:hover,
+#OperatorMinus:hover {
+  font-family: "Plaster";
+}
+
+#OperatorPlusMinus:hover,
+#Key0:hover,
+#Comma:hover,
+#Equal:hover {
+  font-family: "Kavoon";
 }
 
 /*Footer style*/
