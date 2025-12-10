@@ -20,6 +20,23 @@ body {
   background-color: var(--bkg);
   scroll-behavior: smooth;
 }
+/*Splash screen*/
+
+.splash{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0%;
+  left:0%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bkg);
+}
+
+.fade{
+opacity: 0;
+}
 
 /*header style*/
 header {

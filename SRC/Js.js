@@ -6,6 +6,16 @@ const Number = document.querySelectorAll('[id*=Key]');
 const Operators = document.querySelectorAll('[id*=Operator]');
 
 
+
+window.onload=()=>{
+    const splashscreen = document.getElementById('splash');
+
+    setTimeout(()=>{
+        splashscreen.classList.add('fade');
+    },3000)
+}
+
+
 //************************************ Display actions ************************************ //
 //*****************************************************************************************//
 const refreshDisplay = (text) => {
