@@ -12,7 +12,14 @@ window.onload=()=>{
 
     setTimeout(()=>{
         splashscreen.classList.add('fade');
+
+
+        
     },3000)
+
+    setTimeout(()=>{
+        splashscreen.remove()
+    },3001)
 }
 
 
