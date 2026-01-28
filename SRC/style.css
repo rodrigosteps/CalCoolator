@@ -20,7 +20,7 @@ body {
   background-color: var(--bkg);
   scroll-behavior: smooth;
 }
-/*Splash screen*/
+/*Splash screen
 .splash{
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ body {
 .fade{
 opacity: 0;
 }
-
+*/
 /*header style*/
 header {
   margin: 1em auto;
@@ -80,6 +80,8 @@ header {
 }
 
 .Buttons {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 2px;
   width: 100%;
   margin: 1em auto;
@@ -132,18 +134,23 @@ header {
 }
 
 .Buttons button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: ease 0.3s;
   border-radius: 15px;
-  animation: poup 2s ease-in-out infinite alternate;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
 }
 
-@keyframes poup {
-  100% {
-    transform: scale(0.8);
-  }
+
+.Buttons #ClearDisplay span:hover, 
+#Clear span:hover, 
+#Backspace span:hover,
+#OperatorDivide span:hover{
+  font-family: 'Climate Crisis';
+  font-size: 4em;
 }
+
+
+
 
 /*Footer style*/
 .footer {
