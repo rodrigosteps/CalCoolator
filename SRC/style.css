@@ -19,7 +19,24 @@
 body {
   background-color: var(--bkg);
 }
+/*Splash screen
+.splash{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0%;
+  left:0%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bkg);
+  z-index: 1;
+}
 
+.fade{
+opacity: 0;
+}
+*/
 /*header style*/
 header {
   margin: 1em auto;
@@ -81,8 +98,28 @@ header {
 
 .Buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+  width: 100%;
+  margin: 1em auto;
+  animation: bounce 2s ease-in-out 3s forwards;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translatey(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  80% {
+    transform: translatey(30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 .Buttons button {
@@ -116,47 +153,23 @@ header {
 }
 
 .Buttons button:hover {
-  text-align: center;
-  transform: scale(1.1) translateY(-20px);
-  transition: ease-in-out 0.4s;
+  transform: scale(1.05);
+  transition: ease 0.3s;
   border-radius: 15px;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
 }
 
-#ClearDisplay:hover,
-#Clear:hover,
-#Backspace:hover,
-#OperatorDivide:hover {
-  font-family: "Notable";
+
+.Buttons #ClearDisplay span:hover, 
+#Clear span:hover, 
+#Backspace span:hover,
+#OperatorDivide span:hover{
+  font-family: 'Climate Crisis';
+  font-size: 4em;
 }
 
-#Key7:hover,
-#Key8:hover,
-#Key9:hover,
-#OperatorMultiply:hover {
-  font-family: "Frijole";
-}
 
-#Key4:hover,
-#Key5:hover,
-#Key6:hover,
-#OperatorPlus:hover {
-  font-family: "Kumar One";
-}
 
-#Key3:hover,
-#Key2:hover,
-#Key1:hover,
-#OperatorMinus:hover {
-  font-family: "Plaster";
-}
-
-#OperatorPlusMinus:hover,
-#Key0:hover,
-#Comma:hover,
-#Equal:hover {
-  font-family: "Kavoon";
-}
 
 /*Footer style*/
 .footer {
