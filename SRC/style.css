@@ -43,27 +43,27 @@ header {
   width: 50%;
   display: flex;
   justify-content: center;
-  animation: logo  0.4s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3s both;;
-
 }
 
 .logo img {
-  width: 28em;
+  width: 20em;
+  animation: logo  0.4s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3s both;
+background-color: var(--bkg);
+ z-index: 1;
 }
 @keyframes logo {
     0% {
-    -webkit-transform: scale(2.1) ;
-            transform: scale(2.1);
-            background-color:var(--bkg);
-            width: 100%;
-            height: 1700px;
-            position: relative;
-            top: -400px;  
+    -webkit-transform: scale(0.5) ;
+            transform: scale(0.5);
+            width: 150%;
+            height: 200%;
+            position:fixed;
+            top:-500px;
           }
+
   100% {
-    -webkit-transform: scale(1.0);
-            transform: scale(1.0);
-    
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
@@ -98,7 +98,7 @@ header {
 
 .Buttons {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 2px;
   width: 100%;
   margin: 1em auto;
@@ -158,18 +158,6 @@ header {
   border-radius: 15px;
   box-shadow: 2px 2px 3px #116bdf, -2px -2px 3px #69b1f0;
 }
-
-
-.Buttons #ClearDisplay span:hover, 
-#Clear span:hover, 
-#Backspace span:hover,
-#OperatorDivide span:hover{
-  font-family: 'Climate Crisis';
-  font-size: 4em;
-}
-
-
-
 
 /*Footer style*/
 .footer {
